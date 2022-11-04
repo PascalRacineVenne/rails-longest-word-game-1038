@@ -1,0 +1,15 @@
+<h1>NEW GAME</h1>
+
+<div class="letters" style="display:flex">
+  <% @letters.each do |letter| %>
+    <p><%= letter %></p>
+  <% end %>
+</div>
+
+<div class="form">
+  <form action="/score" method="POST" data-turbo="false">
+    <label for="attempt">Give it your best shot!</label>
+    <input type="text" name="attempt">
+    <%# <input type="submit" value=""> %>
+  </form>
+</div>
